@@ -1,0 +1,14 @@
+h2 Resend unlock instructions
+
+= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post, :class=>'bh-form' }) do |f| 
+  = devise_error_messages! 
+  
+  .bh-field.bh-textfield
+    .bh-describe= f.label :email
+    .bh-request= f.text_field :email
+  
+  .bh-field.bh-actions
+    .bh-describe
+    .bh-request
+      = f.submit "Resend unlock instructions"
+      = render :partial => "devise/shared/links"

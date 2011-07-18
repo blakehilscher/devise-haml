@@ -1,0 +1,22 @@
+h2 Sign up
+
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class=>'bh-form'}) do |f|
+  = devise_error_messages! 
+  
+  .bh-field.bh-textfield
+    .bh-describe= f.label :email
+    .bh-request= f.text_field :email
+    
+  .bh-field.bh-passwordfield
+    .bh-describe= f.label :password
+    .bh-request= f.password_field :password
+    
+  .bh-field.bh-passwordfield
+    .bh-describe= f.label :password_confirmation
+    .bh-request= f.password_field :password_confirmation
+    
+  .bh-field.bh-actions
+    .bh-describe
+    .bh-request
+      = f.submit "Sign Up"
+      = render :partial => "devise/shared/links" 
