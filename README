@@ -1,1 +1,1 @@
-devise views as slim.
+Devise views as HAML using the rockhil-form format.
